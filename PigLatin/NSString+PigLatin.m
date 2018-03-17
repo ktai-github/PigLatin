@@ -14,6 +14,31 @@
 
 + (NSString *) stringByPigLatinization : (NSString *) stringToConvert{
   
+  NSArray *foo = [stringToConvert componentsSeparatedByString:@" "];
+  int arrayCount = foo.count;
+  if (arrayCount > 1) {
+//    NSString *convertedWord;
+    NSString *combinedWords = @" ";
+    for (id object in foo) {
+      NSString *latinized = object;
+      
+      NSString *firstLetter = [latinized substringToIndex:1];
+      
+      latinized = [latinized substringFromIndex:1];
+      
+      NSString *result1 = latinized;
+      NSString *result2 = [result1 stringByAppendingString:firstLetter];
+      NSString *result3 = [result2 stringByAppendingString:@"ay"];
+      combinedWords = [combinedWords stringByAppendingString:result3];
+      combinedWords = [combinedWords stringByAppendingString:@" "];
+
+    }
+//    combinedWords = @"%@", conv
+    combinedWords = [combinedWords substringFromIndex:1];
+
+    return combinedWords;
+  }
+  
   NSString *latinized = stringToConvert;
   
   NSString *firstLetter = [latinized substringToIndex:1];
