@@ -3,6 +3,7 @@
 //  PigLatin
 //
 //  Created by KevinT on 2018-02-16.
+//  Based on code from assignment https://ios.compass.lighthouselabs.ca/d9cdf241-feb6-46e6-9b3a-e6c5a570e925
 //  Copyright © 2018 KevinT. All rights reserved.
 //
 
